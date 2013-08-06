@@ -1,0 +1,46 @@
+%html
+    %head
+        %meta{:httpequiv => 'Content-Type', :content =>'text/html; :charset=>utf-8'}
+        %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
+        %title Workout Robot
+        =javascript_include_tag "lib/jquery.js"
+        =javascript_include_tag "lib/jquery-ui.js"
+        =javascript_include_tag "lib/underscore.js"
+        =javascript_include_tag "lib/coffee-script.js"
+
+        =javascript_include_tag "app.js"
+
+        =stylesheet_link_tag "style.css"
+    %body
+        .header.radius3
+            .headerinner
+                %a{:href => ''}
+                =image_tag 'starlight_admin_template_logo_small.png'
+        .mainwrapper
+            .mainwrapperinner
+                .maincontentinner
+                    .content
+                        #application.contenttitle
+                            %h2#default.form
+                            %span Configuration
+
+                    %form.stdform.stdform2{ :method => 'post', :action => ''}
+                        .par
+                            %label Intensity
+                            .field
+                                #intenSlider
+                                %span#intenDisp Medim
+                        .pa
+                            %label Tim
+                            .field
+                                #timeSlider
+                                %span#timeDisp 10 Minutes
+                    %br
+                    #workoutOutline
+                    #workoutWidget
+                .footer
+                    %p
+                        Created By Raadad Elsleiman for NFOshare
+                    %p
+                        Theme by
+                        %a{:href => ''} ThemePixels.com
